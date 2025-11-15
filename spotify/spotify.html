@@ -1,0 +1,225 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="images/logo.png">
+    <title>Spotify Web Player: Music</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="spotify.css"/>
+    <script defer src="spotify.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div class="nav">
+                <div class="nav-option nav-option-active">
+                    <i class="fa-solid fa-house"></i>
+                    <a href="#home">Home</a>
+                </div>
+                <div class="nav-option">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <a href="#search">Search</a>
+                </div>
+                <div class="nav-option">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <a href="#playlists">Playlists</a>
+                </div>
+                <div class="nav-option">
+                    <i class="fa-solid fa-heart"></i>
+                    <a href="#liked">Liked Songs</a>
+                </div>
+            </div>
+            <div class="library">
+                <div class="option">
+                    <div class="lib-option nav-option">
+                        <img src="images/library_icon.png" alt="Library Icon">
+                        <a href="#">Your Library</a>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="lib-box">
+                    <div class="box">
+                        <p class="box-p1">Create your first playlist</p>
+                        <p class="box-p2">It's easy, we'll help you</p>
+                        <button class="badge">Create playlist</button>
+                    </div>
+                    <div class="box">
+                        <p class="box-p1">Let's find some podcasts to follow</p>
+                        <p class="box-p2">We'll keep you updated on new episodes</p>
+                        <button class="badge">Browse podcasts</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="sticky-nav">
+                   <div class="nav-icons">
+                        <img src="images/backward_icon.png" alt="Previous">
+                        <img src="images/forward_icon.png" alt="Next" class="hide">
+                   </div>
+              
+                <div class="sticky-nav-option">
+                  <button class="badge nav-item hide">Explore premium</button>
+                  <button class="badge nav-item dark-badge" title="Install Spotify App"><i class="fa-regular fa-circle-down"></i>Install App</button>
+                  <i class="fa-regular fa-user"></i>
+                </div>
+            </div>
+       
+            <h2>Recently Played</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-play-button"><i class="fa-solid fa-play"></i></div>
+                    <img src="images/card1img.jpeg" class="card-img" alt="Top 50 Global">
+                    <p class="card-title">Top 50 Global</p>
+                    <p class="card-info">Your daily update of the most played tracks worldwide</p>
+                </div>
+                <div class="card">
+                    <div class="card-play-button"><i class="fa-solid fa-play"></i></div>
+                    <img src="images/card2img.jpeg" class="card-img" alt="Your Discover Weekly">
+                    <p class="card-title">Your Discover Weekly</p>
+                    <p class="card-info">New music picked especially for you</p>
+                </div>
+                <div class="card">
+                    <div class="card-play-button"><i class="fa-solid fa-play"></i></div>
+                    <img src="images/card3img.jpeg" class="card-img" alt="Release Radar">
+                    <p class="card-title">Release Radar</p>
+                    <p class="card-info">New releases from your favorite artists</p>
+                </div>
+            </div>
+            
+            <h2>Trending Now Near You</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-play-button"><i class="fa-solid fa-play"></i></div>
+                    <img src="images/card2img.jpeg" class="card-img" alt="Billboard Hot 100">
+                    <p class="card-title">Billboard Hot 100</p>
+                    <p class="card-info">The hottest songs of the moment</p>
+                </div>
+                <div class="card">
+                    <div class="card-play-button"><i class="fa-solid fa-play"></i></div>
+                    <img src="images/card3img.jpeg" class="card-img" alt="Pop Rising">
+                    <p class="card-title">Pop Rising</p>
+                    <p class="card-info">The next generation of pop music</p>
+                </div>
+                <div class="card">
+                    <div class="card-play-button"><i class="fa-solid fa-play"></i></div>
+                    <img src="images/card4img.jpeg" class="card-img" alt="Indie Hits">
+                    <p class="card-title">Indie Hits</p>
+                    <p class="card-info">Independent artists making waves</p>
+                </div>
+                <div class="card">
+                    <div class="card-play-button"><i class="fa-solid fa-play"></i></div>
+                    <img src="images/animal.jpeg" class="card-img" alt="Hip Hop Revolution">
+                    <p class="card-title">Hip Hop Revolution</p>
+                    <p class="card-info">Hip hop classics and new releases</p>
+                </div>
+            </div>
+            
+            <h2>Featured Charts</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-play-button"><i class="fa-solid fa-play"></i></div>
+                    <img src="images/card5img.jpeg" class="card-img" alt="RapCaviar">
+                    <p class="card-title">RapCaviar</p>
+                    <p class="card-info">The hottest hip hop tracks right now</p>
+                </div>
+                <div class="card">
+                    <div class="card-play-button"><i class="fa-solid fa-play"></i></div>
+                    <img src="images/card6img.jpeg" class="card-img" alt="ALT Z">
+                    <p class="card-title">ALT Z</p>
+                    <p class="card-info">Newest alternative rock and indie tracks</p>
+                </div>
+                <div class="card">
+                    <div class="card-play-button"><i class="fa-solid fa-play"></i></div>
+                    <img src="images/card1img.jpeg" class="card-img" alt="Today's Top Hits">
+                    <p class="card-title">Today's Top Hits</p>
+                    <p class="card-info">The biggest global hits right now</p>
+                </div>
+                <div class="card">
+                    <div class="card-play-button"><i class="fa-solid fa-play"></i></div>
+                    <img src="images/card4img.jpeg" class="card-img" alt="Dance Rising">
+                    <p class="card-title">Dance Rising</p>
+                    <p class="card-info">The best new dance and electronic tracks</p>
+                </div>
+            </div>
+
+            <h2>Made For You</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-play-button"><i class="fa-solid fa-play"></i></div>
+                    <img src="images/card2img.jpeg" class="card-img" alt="Your Mix 1">
+                    <p class="card-title">Your Mix 1</p>
+                    <p class="card-info">Based on your recent listens</p>
+                </div>
+                <div class="card">
+                    <div class="card-play-button"><i class="fa-solid fa-play"></i></div>
+                    <img src="images/card3img.jpeg" class="card-img" alt="Summer Vibes">
+                    <p class="card-title">Summer Vibes</p>
+                    <p class="card-info">Perfect for warm, sunny days</p>
+                </div>
+                <div class="card">
+                    <div class="card-play-button"><i class="fa-solid fa-play"></i></div>
+                    <img src="images/card5img.jpeg" class="card-img" alt="Workout Energy">
+                    <p class="card-title">Workout Energy</p>
+                    <p class="card-info">High-energy tracks for your workout</p>
+                </div>
+                <div class="card">
+                    <div class="card-play-button"><i class="fa-solid fa-play"></i></div>
+                    <img src="images/card6img.jpeg" class="card-img" alt="Chill Lounge">
+                    <p class="card-title">Chill Lounge</p>
+                    <p class="card-info">Relaxing beats for any moment</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="lines"></div>
+        </div>
+        <div class="music-player">
+            <div class="album">
+                <div class="album-info">
+                    <img src="images/album.jpg" class="imagealbum" alt="Album Cover">
+                </div>
+                <div class="album-inf">
+                    <p><strong id="song-title">Daylight</strong><br> <span id="artist-name">David Kumar</span></p> 
+                    <i class="fa-regular fa-heart" id="like-btn"></i>
+                </div>
+            </div>
+              
+            <div class="player">
+                <div class="player-control">
+                    <button class="player-btn" title="Shuffle"><i class="fa-solid fa-shuffle"></i></button>
+                    <button class="player-btn" title="Previous"><i class="fa-solid fa-step-backward"></i></button>
+                    <button class="player-btn play-pause-btn" title="Play/Pause"><i class="fa-solid fa-play"></i></button>
+                    <button class="player-btn" title="Next"><i class="fa-solid fa-step-forward"></i></button>
+                    <button class="player-btn" title="Repeat"><i class="fa-solid fa-repeat"></i></button>
+                </div> 
+                <div class="playback-bar">
+                    <span class="curr-time">00:00</span>
+                    <input type="range" min="0" max="100" class="progress-bar" step="1" title="Progress Bar">
+                    <span class="tot-time">3:33</span>
+                </div> 
+            </div>
+            
+            <div class="controls">
+                <button class="control-btn" title="Queue"><i class="fa-solid fa-list"></i></button>
+                <button class="control-btn" title="Lyrics"><i class="fa-solid fa-microphone"></i></button>
+                <button class="control-btn" title="Connect Device"><i class="fa-solid fa-desktop"></i></button>
+                <div class="volume-control">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <input type="range" min="0" max="100" class="volume-slider" value="70" title="Volume Control">
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

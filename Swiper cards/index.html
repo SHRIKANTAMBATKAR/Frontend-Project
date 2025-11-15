@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Cards - Profile Carousel</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="slide-card">
+                    <img class="slide-card-img-top" src="img1.png" alt="Shrikant Ambatkar - Java Developer" />
+                    <div class="slide-card-body">
+                        <h5>
+                            Shrikant Ambatkar <br />
+                            <span>Java Developer</span>
+                        </h5>
+                        <p class="slide-card-text">
+                            "My name is Shrikant Ambatkar. I am currently pursuing B.Tech in Computer Science Engineering at BIT Ballarpur. I am a Java Full Stack Developer."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <div class="slide-card">
+                    <img class="slide-card-img-top" src="img2.jpg" alt="Shrikant Ambatkar - Frontend Developer" />
+                    <div class="slide-card-body">
+                        <h5>
+                            Shrikant Ambatkar <br />
+                            <span>Frontend Developer</span>
+                        </h5>
+                        <p class="slide-card-text">
+                            "My name is Shrikant Ambatkar. I am currently pursuing B.Tech in Computer Science Engineering at BIT Ballarpur. I am a Java Full Stack Developer."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <div class="slide-card">
+                    <img class="slide-card-img-top" src="img4.jpg" alt="Shrikant Ambatkar - UI/UX Designer" />
+                    <div class="slide-card-body">
+                        <h5>
+                            Shrikant Ambatkar <br />
+                            <span>UI/UX Designer</span>
+                        </h5>
+                        <p class="slide-card-text">
+                            "My name is Shrikant Ambatkar. I am currently pursuing B.Tech in Computer Science Engineering at BIT Ballarpur. I am a Java Full Stack Developer."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+                <div class="slide-card">
+                    <img class="slide-card-img-top" src="img3.png" alt="Shrikant Ambatkar - Project Manager" />
+                    <div class="slide-card-body">
+                        <h5>
+                            Shrikant Ambatkar <br />
+                            <span>Project Manager</span>
+                        </h5>
+                        <p class="slide-card-text">
+                            "My name is Shrikant Ambatkar. I am currently pursuing B.Tech in Computer Science Engineering at BIT Ballarpur. I am a Java Full Stack Developer."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            centeredSlides: true,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 35
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

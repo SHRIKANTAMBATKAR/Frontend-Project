@@ -1,0 +1,36 @@
+.profile-card{
+    min-width: 250px;
+    max-width: 400px; 
+    min-height: 350px;
+    max-height: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.1);
+    font-family: Arial, sans-serif;
+    background-color: rgb(199, 226, 251);
+    font-weight: 600;
+}
+button{
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    
+}
+button:hover{
+    font-size: 15px;
+    background-color:yellowgreen;
+    cursor:pointer;
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+}

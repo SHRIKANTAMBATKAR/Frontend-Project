@@ -1,0 +1,406 @@
+[data-theme="light"] {
+  --bg-color: #f8f9fa;
+  --color: #2c3e50;
+  --togglebg: #d4e7d5;
+  --toggleslider: #fff;
+  --roundcolor: #fff;
+  --svgcolor: #111;
+  --border-color: #dee2e6;
+  --hover-bg: #e9ecef;
+  --accent-color: #4CAF50;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --color: #e9dcdc;
+  --togglebg: #333;
+  --toggleslider: #e9dcdc;
+  --roundcolor: #333;
+  --svgcolor: #fff;
+  --border-color: #444;
+  --hover-bg: #2d2d2d;
+  --accent-color: #66BB6A;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--color);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.btn {
+  margin-top: 0.3rem;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-switch-wrapper em {
+  font-size: 0.95rem;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: var(--togglebg);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.slider:before {
+  background-color: var(--roundcolor);
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: var(--toggleslider);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 10px;
+  color: var(--color);
+}
+
+.app-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 80px;
+  color: var(--accent-color);
+}
+
+.icon {
+  font-size: 7rem;
+  text-align: center;
+  margin: 20px 0;
+  display: block;
+}
+
+svg {
+  width: 64px;
+  height: 64px;
+}
+
+/* Todo List */
+.todo-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.todo-item {
+  margin-bottom: 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  background: var(--hover-bg);
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.todo-item:hover {
+  background: var(--border-color);
+}
+
+.todo-item span.todo-text {
+  flex-grow: 1;
+  margin-left: 15px;
+  margin-right: 10px;
+  font-size: 18px;
+  word-break: break-word;
+}
+
+.done {
+  opacity: 0.6;
+}
+
+.done span.todo-text {
+  text-decoration: line-through;
+  user-select: none;
+  color: var(--color);
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+  display: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.tick {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border: 2.5px solid var(--accent-color);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+}
+
+.tick::before {
+  content: "✔";
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--accent-color);
+  display: none;
+}
+
+.done .tick {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.done .tick::before {
+  display: inline;
+  color: white;
+}
+
+.delete-todo {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-todo svg {
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  color: #ff4336;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  background: var(--hover-bg);
+  color: var(--color);
+  font-size: 16px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+input[type="text"]::placeholder {
+  color: var(--color);
+  opacity: 0.6;
+}
+
+.submit-btn {
+  padding: 12px 18px;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+}
+
+.submit-btn:hover {
+  background: #45a049;
+}
+
+/* Empty State */
+.empty-state {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 20px;
+}
+
+.empty-state__description {
+  font-size: 18px;
+  text-align: center;
+  margin: 1rem;
+  max-width: 400px;
+  opacity: 0.8;
+}
+
+.keyboard-hint {
+  font-size: 14px;
+  color: var(--accent-color);
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.todo-list:empty ~ .empty-state {
+  display: flex;
+}
+
+.todo-list:not(:empty) ~ .empty-state {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    margin: 0;
+  }
+
+  .container {
+    padding: 1.5rem 10px;
+  }
+
+  .app-title {
+    font-size: 60px;
+  }
+
+  .icon {
+    font-size: 5rem;
+  }
+
+  .empty-state__description {
+    font-size: 16px;
+    width: 90%;
+  }
+
+  .todo-item span.todo-text {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .theme-switch-wrapper em {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 8px;
+  }
+
+  .app-title {
+    font-size: 48px;
+  }
+
+  .icon {
+    font-size: 4rem;
+  }
+
+  .empty-state__description,
+  .keyboard-hint {
+    font-size: 14px;
+  }
+
+  .todo-item {
+    padding: 10px 12px;
+    margin-bottom: 10px;
+  }
+
+  .tick {
+    width: 26px;
+    height: 26px;
+  }
+
+  .delete-todo svg {
+    width: 20px;
+    height: 20px;
+  }
+}
